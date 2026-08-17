@@ -18,7 +18,7 @@ java -jar junit-platform-console-standalone-1.11.0.jar --class-path out --scan-c
 
 
 
-#import unittest
+import unittest
 
 from unittest import Testcase
 
@@ -29,6 +29,7 @@ class PizzaTest(TestCase):
 
 
 def test_forPizzaType_isFour(self):
+self.assertEqual
 
 python3 -m unittest test_filename.py
 
