@@ -36,3 +36,5 @@ python3 -m unittest test_filename.py
 
 
 
+const prompt = require("prompt-sync")()
+
