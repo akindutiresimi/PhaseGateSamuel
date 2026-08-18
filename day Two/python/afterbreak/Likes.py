@@ -1,29 +1,29 @@
 
-def blogPost():
+def blogPost(array = {}):
 
-    for count in range(1, Array.length -1)
+    for count in range(1, Array.length -1):
 
     
         if (count < null):
     
-        System.out.println("no one likes this");
+         print("no one likes this");
     
-        else if(count == 0):
+        elif(count == 0):
 
-        System.out.println("peter likes this");
+         print("peter likes this");
     
 
-        else if(count == 1):
+        elif(count == 1):
 
-        System.out.println("jacob and alex like this");
+         print("jacob and alex like this");
     
-        else if(count == 2):
+        elif(count == 2):
 
-        System.out.println("max ,john and mark like this");
+         print("max ,john and mark like this");
     
-        else if(count == 3):
+        elif(count == 3):
 
-        System.out.println("Alex, jacob, and 2 others like this");
+        print("Alex, jacob, and 2 others like this");
     
 
    
