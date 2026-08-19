@@ -2,12 +2,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class CalculatorTest {
-public class CalculatorTest {
+
 
 @Test
 
 javac -cp "junit-platform-console-standalone-1.11.0.jar;out" -d out RangeInNumberOfArray.java RangeInNumberOfArrayTest.java                        //window
 
+javac -cp "junit-platform-console-standalone-1.11.0.jar;out" -d out SumOfNumberTest.java sumOfNumber.java
 
 javac -cp "junit-platform-console-standalone-1.11.0.jar;out" -d out RangeInNumberOfArray.java RangeInNumberOfArrayTest.java                        //window
 
@@ -22,14 +23,17 @@ import unittest
 
 from unittest import Testcase
 
-from account_function import
-
+from account_function import*
 
 class PizzaTest(TestCase):
 
+    def test_forPizzaType_isFour(self):
 
-def test_forPizzaType_isFour(self):
 self.assertEqual
+
+
+
+
 
 python3 -m unittest test_filename.py
 
