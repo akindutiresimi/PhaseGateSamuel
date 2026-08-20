@@ -27,7 +27,7 @@ public class SimpleTransaction{
 
     public static int amountDeducted(int amountWithdraw) {
 
-    int amountWillingWithdraw = 7000;
+    int amountWillingWithdraw = 2000;
 
     return  amountWillingWithdraw; 
 
@@ -75,7 +75,7 @@ public class SimpleTransaction{
 
 
             System.out.println(newCurrentAmount(currentAmount, depositedAmount));
-
+            break;
 
     case 2:
             System.out.println("Withdraw");
@@ -84,27 +84,26 @@ public class SimpleTransaction{
 
 
                 if(Withdraw > newCurrentAmount){
-                     System.out.println("insufficient funds")
+                     System.out.println("insufficient funds");
                 }
 
 
                  else{
                     System.out.println(newCurrentAmount(currentAmount, amountDeducted));
                  }
+            break;        
 
     case 3:
             System.out.println("Show Transaction");
-            
-            
-
-
-
+                System.out.println(SimpleTransaction(+ currentAmount  + depositedAmount + newBalanceAfterWithdraw);
+            break;            
+        
 
     case 4:
             System.out.println("Exit");
-
-
-
+                 System.out.println(newBalanceAfterWithdraw);
+                 System.out.println("Thank you for using Transaction Log App");
+             break;                   
 
 
 
