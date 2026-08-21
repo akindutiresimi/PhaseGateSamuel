@@ -142,15 +142,16 @@ public class Level4{
     }
 
 
-    public static void main(String[] args){
-
-    System.out.println(prime(2,5,4));
-    }
-
+    
 
     public static void main(String[] args){
   
     System.out.println(simpleIntrest(2,5,4));
+    }
+
+    public static void main(String[] args){
+
+    System.out.println(rectangle(2,5,4));
     }
 
 

@@ -5,14 +5,14 @@ public class CalculatorTest {
 
 
 @Test
-java -cp "junit-platform-console-standalone-1.11.0.jar:out" org.junit.platform.console.ConsoleLauncher execute --scan-classpath 
 
+javac -cp "junit-platform-console-standalone-1.11.0.jar;out" -d out RangeInNumberOfArray.java RangeInNumberOfArrayTest.java                        //window
 
+javac -cp "junit-platform-console-standalone-1.11.0.jar;out" -d out SumOfNumberTest.java sumOfNumber.java
 
+javac -cp "junit-platform-console-standalone-1.11.0.jar;out" -d out RangeInNumberOfArray.java RangeInNumberOfArrayTest.java                        //window
 
-javac -cp "junit-platform-console-standalone-1.11.0.jar:out" -d out SimpleTransactionTest.java SimpleTransaction.java
-
-
+java -jar junit-platform-console-standalone-1.11.0.jar --class-path out --scan-class-path                                             //linux
 
 
 
@@ -41,7 +41,4 @@ python3 -m unittest test_filename.py
 
 
 const prompt = require("prompt-sync")()
-
-
-
 
