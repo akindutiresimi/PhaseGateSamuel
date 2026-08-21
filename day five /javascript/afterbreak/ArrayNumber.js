@@ -1,4 +1,5 @@
-function ArrayNumber(const[] number): 
+function ArrayNumber(le[] number): 
+   let[] number = {2,2,1};
    int counter = 0;
 
     for (let count = 0; count < number.length; count++){
@@ -10,13 +11,9 @@ function ArrayNumber(const[] number):
             counter = number[count];
            
     return counter;
-}
 
 
-    public static void main(String[] args){
-
-    int[] number = {2,2,1};
+ 
     
-    System.out.println(arrayNumber(number));
-    }
-}
+   console.log (arrayNumber(number));
+ 
