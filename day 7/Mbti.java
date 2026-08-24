@@ -27,9 +27,6 @@ Sensing S Vs Intuitive N: Questions 2, 6, 10, 14, 18
 Thinking T Vs Feeling F: Questions 3, 7, 11, 15, 19
 Judging J Vs Perceptive P: Questions 4, 8, 12, 16, 20
 
-semicolοn
-
-(c) Property of Semicolon Village Limited. All rights reserved by the company.
 
 
     }
