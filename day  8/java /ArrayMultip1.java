@@ -11,7 +11,7 @@ public class ArrayMultip1{
 
         for (int counter = 0; counter < number[count]; counter++){
 
-
+            
         }
 
     }  
