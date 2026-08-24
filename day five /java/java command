@@ -1,0 +1,47 @@
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+public class CalculatorTest {
+
+
+@Test
+java -cp "junit-platform-console-standalone-1.11.0.jar:out" org.junit.platform.console.ConsoleLauncher execute --scan-classpath 
+
+
+
+
+javac -cp "junit-platform-console-standalone-1.11.0.jar:out" -d out SimpleTransactionTest.java SimpleTransaction.java
+
+
+
+
+
+
+
+
+import unittest
+
+from unittest import Testcase
+
+from account_function import*
+
+class PizzaTest(TestCase):
+
+    def test_forPizzaType_isFour(self):
+
+self.assertEqual
+
+
+
+
+
+python3 -m unittest test_filename.py
+
+
+
+
+const prompt = require("prompt-sync")()
+
+
+
+
