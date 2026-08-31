@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 import java.util.Scanner;
 
-public class SimpleParkingLot2 {
+public class ParkingLot {
 
        
      public static int[] parkingSpace (int[] parkingLot){
@@ -26,22 +26,38 @@ public class SimpleParkingLot2 {
         return emptySpace;
     }            
 
-     public static void checkOutLot(int[] parkingLot , int slotNumber){
-         for (int count = 0; count < parkingLot.length; count++) {
-            if (count == slotNumber - 1 && parkingLot[count] == 1) {
-                parkingLot[count] = 0;
-            }
-        }
 
-           
+ 
+
+    public static int enterLotSpace(int[] parkingLot , int slotNumber){
+        for (int count = 0; count < parkingLot.length; count++) {        
+
+             if (count == slotNumber - 1 && parkingLot[count] == 0) {
+                parkingLot[count] = 1;
+            }
+
+            else if (count == slotNumber - 1 && parkingLot[count] == 1) {
+                return 100;
+            }
+
+          
+        }
+        
+        return slotNumber;
+    
     }
 
 
 
-       public static int checkOutLot(int[] parkingLot , int slotNumber){
+    public static int checkOutLot(int[] parkingLot , int slotNumber){
          for (int count = 0; count < parkingLot.length; count++) {
             if (count == slotNumber - 1 && parkingLot[count] == 1) {
                 parkingLot[count] = 0;
+            }
+        
+            else if (count == slotNumber - 1 && parkingLot[count] == 0) {
+
+                return 200;
             }
         }
 
@@ -49,33 +65,6 @@ public class SimpleParkingLot2 {
     }
 
 
-
-
-   /* public static void enterLotSpace(int[] parkingLot , int slotNumber){
-        for (int count = 0; count < parkingLot.length; count++) {
-            if (count == slotNumber - 1 && parkingLot[count] == 0) {
-                parkingLot[count] = 1;
-                slotNumber = "car successfully parked";
-            }
-            
-            else if(slotNumber < 0 && slotNumber > 20){
-
-                slotNumber = "invalid, pick from 1 to 20";
-            }
-
-            else if(slotNumber >= 'A' && slotNumber <= 'Z'){
-
-                slotNumber = "invalid, pick from 1 to 20";      
-            }
-        }
-        
-        return slotNumber;*/
-    
-    }
-
-
-
- 
 
 
 
@@ -125,15 +114,24 @@ public class SimpleParkingLot2 {
 
                 case 2:
                     System.out.println("Choose from the slot below!!!!!");
+
                     System.out.println(Arrays.toString(parkingSpace(parkingLot)));                    
 
                     System.out.print("Enter the parking space you want: ");
 
                      int parkingChoice = input.nextInt();
 
-                    System.out.println("Car successfully parked in space " + (enterLotSpace(parkingLot , parkingChoice)));
+                     int slot = enterLotSpace(parkingLot , parkingChoice);
+
+                        if (slot == 100) {
+
+                        System.out.println("Slot is filled!!!, enter an empty choice");
+                        }
+
+                        else {
+                        System.out.println("Car successfully parked in space " + slot);
+                        }
                     
-                
                     break;
 
 
@@ -143,8 +141,18 @@ public class SimpleParkingLot2 {
                     System.out.print("Enter the parking space to check out: ");
 
                     int checkoutChoice = input.nextInt();
+                
+                    int out = checkOutLot(parkingLot , checkoutChoice);
+
+                        if(out == 200){
+                        
+                        System.out.println("Slot is  occupied, enter your parked choice");
+                        }
+                        
+                        else{
             
-                    System.out.println("Car checked out successfully from space " + checkOutLot(parkingLot , checkoutChoice));
+                        System.out.println("Car checked out successfully from space " + out);
+                        }
 
                     break;
 
@@ -158,7 +166,7 @@ public class SimpleParkingLot2 {
 
              default:
 
-                    System.out.println("Invalid option. Please choose between 0 and 20.");
+                    System.out.println("Invalid option. Please choose between 1 and 4.");
 
     }
 

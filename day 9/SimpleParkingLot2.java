@@ -7,8 +7,8 @@ public class SimpleParkingLot2 {
        
      public static int[] parkingSpace (int[] parkingLot){
         int count = 0;
-        for (int counter = 0; counter < parkingLot.length; counter++) {
-            if (parkingLot[counter] == 0) {
+        for (int space = 0; space < parkingLot.length; space++) {
+            if (parkingLot[space] == 0) {
                 count++;
             }
         }                     
@@ -17,65 +17,62 @@ public class SimpleParkingLot2 {
         int[] emptySpace = new int[count];
 
           int index = 0;
-         for (int counter = 0; counter < parkingLot.length; counter++) {
-            if (parkingLot[counter] == 0) {
-                emptySpace[index++] = counter + 1;
+         for (int space = 0; space < parkingLot.length; space++) {
+            if (parkingLot[space] == 0) {
+                emptySpace[index++] = space + 1;
             }
         }    
 
         return emptySpace;
     }            
 
-     public static void checkOutLot(int[] parkingLot , int slotNumber){
-         for (int count = 0; count < parkingLot.length; count++) {
-            if (count == slotNumber - 1 && parkingLot[count] == 1) {
-                parkingLot[count] = 0;
-            }
-        }
-
-           
-    }
 
 
-
-       public static int checkOutLot(int[] parkingLot , int slotNumber){
-         for (int count = 0; count < parkingLot.length; count++) {
-            if (count == slotNumber - 1 && parkingLot[count] == 1) {
-                parkingLot[count] = 0;
-            }
-        }
-
-            return slotNumber;
-    }
-
-
-
-
-   /* public static void enterLotSpace(int[] parkingLot , int slotNumber){
+    public static String enterLotSpace(int[] parkingLot , int slotNumber){
         for (int count = 0; count < parkingLot.length; count++) {
-            if (count == slotNumber - 1 && parkingLot[count] == 0) {
+
+            if(parkingLot[count] >= 'A' && parkingLot[count] <= 'Z'){
+                return ("Invalid, enter number of empty slot you want");
+            }
+
+            else if(parkingLot[count] >= 'a' && parkingLot[count] <= 'z'){
+                return ("Invalid, enter number of empty slot you want");
+             }
+
+            else if (count == slotNumber - 1 && parkingLot[count] == 0) {
                 parkingLot[count] = 1;
-                slotNumber = "car successfully parked";
+                
+                return ("The car is successfully parked");            
+            }
+
+            else if(count == slotNumber && parkingLot[count] == 1){
+                
+
+            }
+        }
+    return ("The Slot is filled, picked an empty slot");
+    }
+
+
+
+    public static String checkOutLot(int[] parkingLot , int slotNumber){
+         for (int count = 0; count < parkingLot.length; count++) {
+            if (count == slotNumber - 1 && parkingLot[count] == 1) {
+                parkingLot[count] = 0;
+        
+                return ("Check out the car succesfully");
+            }
+
+            else if (count == slotNumber - 1 && parkingLot[count] == 0){
             }
             
-            else if(slotNumber < 0 && slotNumber > 20){
-
-                slotNumber = "invalid, pick from 1 to 20";
-            }
-
-            else if(slotNumber >= 'A' && slotNumber <= 'Z'){
-
-                slotNumber = "invalid, pick from 1 to 20";      
-            }
         }
-        
-        return slotNumber;*/
-    
+
+            return ("Slot empty, pick the slot number you packed");
     }
 
 
 
- 
 
 
 
@@ -127,12 +124,11 @@ public class SimpleParkingLot2 {
                     System.out.println("Choose from the slot below!!!!!");
                     System.out.println(Arrays.toString(parkingSpace(parkingLot)));                    
 
-                    System.out.print("Enter the parking space you want: ");
+                    System.out.print("Enter the parking space number you want: ");
 
                      int parkingChoice = input.nextInt();
 
-                    System.out.println("Car successfully parked in space " + (enterLotSpace(parkingLot , parkingChoice)));
-                    
+                    System.out.println(enterLotSpace(parkingLot , parkingChoice));
                 
                     break;
 
@@ -140,11 +136,11 @@ public class SimpleParkingLot2 {
 
               case 3:
 
-                    System.out.print("Enter the parking space to check out: ");
+                    System.out.print("Enter the parking space number to check out: ");
 
                     int checkoutChoice = input.nextInt();
             
-                    System.out.println("Car checked out successfully from space " + checkOutLot(parkingLot , checkoutChoice));
+                    System.out.println(checkOutLot(parkingLot , checkoutChoice));
 
                     break;
 
@@ -158,7 +154,7 @@ public class SimpleParkingLot2 {
 
              default:
 
-                    System.out.println("Invalid option. Please choose between 0 and 20.");
+                    System.out.println("Invalid option. Please choose between 1 and 4.");
 
     }
 
